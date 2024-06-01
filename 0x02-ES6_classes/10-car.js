@@ -1,8 +1,8 @@
 export default class Car {
-  constructor(brand, color, model) {
-    this._brand = brand;
-    this._color = color;
-    this._model = model;
+  constructor(brand, motor, color) {
+    this.brand = brand;
+    this.color = color;
+    this.motor = model;
   }
 
   get brand() {
@@ -22,11 +22,11 @@ export default class Car {
   }
 
   get model() {
-    return this._model;
+    return this._motor;
   }
 
   set model(value) {
-    this._model = value;
+    this._motor = value;
   }
 
   static get [Symbol.species]() {
