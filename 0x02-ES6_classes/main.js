@@ -1,14 +1,7 @@
-import Car from "./10-car.js";
+import EVCar from "./100-evcar.js";
 
-class TestCar extends Car {}
+const ec1 = new EVCar("Tesla", "Turbo", "Red", "250");
+console.log(ec1);
 
-const tc1 = new TestCar("Nissan", "Turbo", "Pink");
-const tc2 = tc1.cloneCar();
-
-console.log("Tc1", tc1);
-console.log("Tc1 instance", tc1 instanceof TestCar);
-
-console.log("Tc2", tc2);
-console.log("Tc2 instance", tc2 instanceof TestCar);
-
-console.log(tc1 == tc2);
+const ec2 = ec1.cloneCar();
+console.log(ec2);

@@ -1,4 +1,4 @@
-import Car from "./10-car";
+import Car from './10-car';
 
 export default class EVCar extends Car {
   constructor(brand, motor, color, range) {
@@ -12,5 +12,9 @@ export default class EVCar extends Car {
 
   set range(value) {
     this._range = value;
+  }
+
+  cloneCar() {
+    return new super.constructor[Symbol.species]();
   }
 }
