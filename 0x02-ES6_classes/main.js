@@ -1,12 +1,14 @@
-import Building from "./5-building.js";
+import Car from "./10-car.js";
 
-const b = new Building(100);
-console.log(b);
+class TestCar extends Car {}
 
-class TestBuilding extends Building {}
+const tc1 = new TestCar("Nissan", "Turbo", "Pink");
+const tc2 = tc1.cloneCar();
 
-try {
-  new TestBuilding(200);
-} catch (err) {
-  console.log(err);
-}
+console.log("Tc1", tc1);
+console.log("Tc1 instance", tc1 instanceof TestCar);
+
+console.log("Tc2", tc2);
+console.log("Tc2 instance", tc2 instanceof TestCar);
+
+console.log(tc1 == tc2);
