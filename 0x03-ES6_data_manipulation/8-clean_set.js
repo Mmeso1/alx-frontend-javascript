@@ -1,5 +1,10 @@
 export default function cleanSet(aSet, startString) {
-  if (startString === '') {
+  if (
+    !aSet
+    || !startString
+    || !(aSet instanceof Set)
+    || typeof startString !== 'string'
+  ) {
     return '';
   }
 
