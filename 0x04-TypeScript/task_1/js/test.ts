@@ -1,9 +1,6 @@
-import { Directors } from "./main";
-const director1: Directors = {
-  firstName: "John",
-  lastName: "Doe",
-  location: "London",
-  fullTimeEmployee: true,
-  numberOfReports: 17,
-};
-console.log(director1);
+import { StudentClass } from "./main";
+
+const student = new StudentClass("Mark", "Doe");
+console.log(student);
+console.log(student.workOnHomework());
+console.log(student.displayName());
