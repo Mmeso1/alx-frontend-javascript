@@ -59,3 +59,9 @@ export function executeWork(employee: any) {
     return employee.workTeacherTasks();
   }
 }
+
+type Subjects = "Math" | "History";
+
+export function teachClass(todayClass: Subjects) {
+  return todayClass === "Math" ? "Teaching Math" : "Teaching History";
+}
